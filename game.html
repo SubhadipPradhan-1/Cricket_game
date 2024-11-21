@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cricket_game</title>
+    <style>
+    body{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+    <!-- <h2 id="result"></h2>
+    <h2 id="print"></h2> -->
+    <button onclick="
+    document.write('user choise bat ,\n');
+    comuterchoice()">Bat</button>
+
+    <button onclick="
+    document.write('user choise ball ,\n');
+    comuterchoice1()">Ball</button>
+
+    <button onclick="
+    document.write('user choise stump ,\n');
+    comuterchoice2()">Stump</button>
+
+</body>
+<script>
+    let score={
+        win:0,
+        lost:0,
+        tie:0,
+    };
+    function comuterchoice(){
+        let randomnumber=Math.random() *3;
+        if(randomnumber<=1 && randomnumber>0){
+            var comchoice='bat';
+            document.write('computer choise bat ,\n');
+        }
+        else if(randomnumber<=2 && randomnumber>1){
+            var comchoice='ball';
+            document.write('computer choise ball ,\n');
+        }
+        else{
+            var comchoice='stump';
+            document.write('computer choise stump ,\n');
+        }
+        if(comchoice=='ball'){
+            score.win ++;
+            alert(`won:${score.win} , tie:${score.tie},lost:${score.lost}`);
+        document.write('user won \n');
+    }
+    else if(comchoice=='bat'){
+            score.tie++;
+            alert(`won:${score.win} , tie:${score.tie},lost:${score.lost}`);
+        document.write('tie up \n');
+    }
+    else{
+        document.write('computer won \n');
+        score.lost++;
+        alert(`won:${score.win} , tie:${score.tie},lost:${score.lost}`);
+    }
+    }
+    function comuterchoice1(){
+        let randomnumber=Math.random() *3;
+        if(randomnumber<=1 && randomnumber>0){
+            var comchoice='bat';
+            document.write('computer choise bat ,\n');
+        }
+        else if(randomnumber<=2 && randomnumber>1){
+            var comchoice='ball';
+            document.write('computer choise ball ,\n');
+        }
+        else{
+            var comchoice='stump';
+            document.write('computer choise stump ,\n');
+        }
+        if(comchoice=='bat'){
+            score.win++;
+            alert(`won:${score.win} , tie:${score.tie},lost:${score.lost}`);
+        document.write('computer won \n');
+        }
+        else if(comchoice=='ball'){
+            score.tie++;
+            alert(`won:${score.win} , tie:${score.tie},lost:${score.lost}`);
+            document.write('tie up \n');
+        }
+        else{
+        document.write('user won \n');
+            score.lost++;
+            alert(`won:${score.win} , tie:${score.tie},lost:${score.lost}`);
+
+        }
+    }
+    function comuterchoice2(){
+        let randomnumber=Math.random() *3;
+        if(randomnumber<=1 && randomnumber>0){
+            var comchoice='bat';
+            document.write('computer choise bat ,\n');
+        }
+        else if(randomnumber<=2 && randomnumber>1){
+            var comchoice='ball';
+            document.write('computer choise ball \n');
+        }
+        else{
+            var comchoice='stump';
+            document.write('computer choise stump \n');
+        }
+        if(comchoice=='bat'){
+            score.win++;
+            alert(`won:${score.win} , tie:${score.tie},lost:${score.lost}`);
+        document.write('user won \n');
+        }
+        else if(comchoice=='stump'){
+            score.tie++;
+            alert(`won:${score.win} , tie:${score.tie},lost:${score.lost}`);
+            document.write('tie up \n');
+        }
+        else{
+            score.lost;
+            alert(`won:${score.win} , tie:${score.tie},lost:${score.lost}`);
+        document.write('computer won \n');
+        }
+    }
+    
+    
+</script> 
+</html>
